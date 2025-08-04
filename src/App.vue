@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="bgBox" v-motion :initial="{ opacity: 0, y: 25 }" :enter="{ opacity: 1, y: 0 }" :duration="1000">
-      <img src="../20240915-66e6e5abe3e97.webp" alt="">
+      <img src="https://i.p-i.vip/43/20240915-66e6e5abe3e97.webp" alt="">
     </div>
 
     <div class="bgGrid">
@@ -16,12 +16,12 @@
     <div class="main" v-motion :initial="{ opacity: 0 }" :enter="{ opacity: 1 }" :duration="1000">
       <div class="info">
         <div class="header">
-          <img src="../OIP-C.webp" alt="">
+          <img src="https://i.p-i.vip/43/20240913-66e403f2331ec.webp" alt="">
         </div>
 
         <div class="infoText">
           <h1>Hi,</h1>
-          <h1>I'm <span class="qn">Xianrong</span></h1>
+          <h1>I'm <span class="qn">鹊楠</span></h1>
         </div>
       </div>
 
@@ -55,7 +55,7 @@
     </div>
 
     <div class="footer">
-      By xiaorong | ©2024
+      By Quenan | ©2024
     </div>
 
     <vs-dialog overlay-blur width="550px" not-center v-model="active">
@@ -81,14 +81,30 @@
               <template #content>{{ i.content }}</template>
             </vs-tooltip>
 
+            <vs-tooltip placement="top">
+              <vs-avatar color="#FF6D1A">
+                初
+              </vs-avatar>
+
+              <template #content>初七云cdn</template>
+            </vs-tooltip>
+
           </vs-avatar-group>
         </vs-alert>
 
         <vs-alert color="#00BCD4" type="gradient" v-model:hidden-content="aboutHidden">
           <template #title>关于项目</template>
 
-          <p>你可以从这里访问 <b>我的博客、GitHub、哔哩哔哩、网易云</b> 以及给我发 <b>邮件</b> ！</p>
-          
+          <p>你可以从这里访问 <b>我的博客、GitHub、哔哩哔哩、网易云歌单</b> 以及给我发 <b>邮件</b> ！</p>
+          <p>本项目借鉴了
+            <b><a href="https://pzj.us.kg/" target="_blank">pzjawa</a></b> 、
+            <b><a href="https://www.liushen.fun/" target="_blank">清羽飞扬</a></b>
+            等主页，感谢他们awa
+          </p>
+          <p>项目已经开源：</p>
+          <p><a href="https://github.com/QNquenan/homepage-for-vue3"
+              target="_blank">https://github.com/QNquenan/homepage-for-vue3</a>
+          </p>
         </vs-alert>
       </div>
 
@@ -115,6 +131,9 @@
           </div>
 
           <div class="footerBtn">
+            <vs-button color="#fe8599" @click="versions" type="border">
+              当前版本
+            </vs-button>
             <vs-button color="#fe8599" @click="active = false">
               知道啦
             </vs-button>
@@ -134,42 +153,41 @@ export default {
       techHidden: true,
       aboutHidden: true,
       typingTexts: [
-        "路漫漫其修远兮，吾将上下而求索。",
-        "老骥伏枥，志在千里。烈士暮年，壮心不已。",
-        "君负鸿鹄志，蹉跎书剑年。",
-        "大鹏一日同风起，扶摇直上九万里。",
-        "Together with all costs, rush you in the future.",
+        "你好鸭，欢迎来到我的主页！",
+        "彼方尚有荣光在，世界不止眼前的苟且，还有诗和远方",
+        "累了可以在我这里歇歇脚嗷",
+        "May you happy every day",
       ],
       btnList: [
         {
           icon: 'icon-wodeboke',
           animate: '博客',
           color: '#fe8599',
-          href: 'https://www.xiaorong.fun'
+          href: 'https://blog.quenan.cn'
         },
         {
           icon: 'icon-github',
           animate: 'Github',
           color: '#3d3d3d',
-          href: 'https://github.com/rabbit4-miyu'
+          href: 'https://github.com/QNquenan'
         },
         {
           icon: 'icon-bilibili',
           animate: 'BiliBili',
           color: '#0BA6D8',
-          href: 'https://space.bilibili.com/1869775783'
+          href: 'https://space.bilibili.com/495882959'
         },
         {
           icon: 'icon-youjian1',
           animate: 'E-mail',
           color: '#FACB1E',
-          href: 'mailto:1511063910@qq.com'
+          href: 'mailto:qn2987271942@outlook.com'
         },
         {
           icon: 'icon-wangyiyunyinle1',
           animate: '网易云',
           color: '#D81E06',
-          href: 'https://music.163.com/#/user/home?id=8645146032'
+          href: 'https://music.163.com/#/playlist?id=2696501847&creatorId=1785635020'
         },
       ],
       avaters: [
@@ -204,8 +222,8 @@ export default {
           content: 'Github'
         }
       ],
-      upTime: '2024-09-16',
-      version: 'beta3',
+      upTime: '2025-03-17',
+      version: 'v3',
       gridRows: 9,
       gridCols: 5,
       active: false,
