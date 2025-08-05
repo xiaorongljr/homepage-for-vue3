@@ -55,7 +55,7 @@
     </div>
 
     <div class="footer">
-      By xiaorong | ©2024
+      By xiaorong | ©2024-2025 www.xiaorong.fun All rights reserved.
     </div>
 
     <vs-dialog overlay-blur width="550px" not-center v-model="active">
